@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section>
-        <h1>Boolean Train</h1>
-        <input id="lenght" type="number" placeholder="Inserisci km">
-        <input id="age" type="number" placeholder="Inserisci età">
-        <button id="ticket">Calcola il biglietto</button>
-        <h2 id="ticket-price"></h2>
+    <section class="container text-center">
+        <header class="py-4">
+            <h1>Boolean Train</h1>
+        </header>
+        <main class="ms-bg-white">
+            <h2 class="py-4">Calcola il prezzo del tuo biglietto</h2>
+            <div>
+                <input id="name" type="text" placeholder="Nome-Cognome"> 
+                <input id="age" type="number" placeholder="Inserisci età">
+                <input id="lenght" type="number" placeholder="Inserisci km">
+            </div>
+            <div class="py-5">
+                <button type="button" class="btn btn-dark" id="ticket">Calcola il biglietto</button>
+                <button type="button" class="btn btn-dark" id="reset">Annulla</button>
+            </div>
+        </main>
+        <footer class="py-4">
+            <div>
+                <h4 id="all-name"></h4>
+                <h5 id="ticket-price"></h5>
+            </div>
+        </footer>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
