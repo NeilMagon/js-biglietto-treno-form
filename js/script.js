@@ -20,17 +20,17 @@ ticket.addEventListener(`click`, function() {
     console.log(age)
     const name = document.querySelector(`#name`).value;
     // prezzo totale
-    let totalPrice = lenght * kmPrice + `€`;
+    let totalPrice = lenght * kmPrice;
         if (age < 18){
-            totalPrice = (totalPrice - (totalPrice * smallDiscount / 100));
+            totalPrice = (lenght * kmPrice - (lenght * kmPrice * smallDiscount / 100));
         } else if (age > 65){
-            totalPrice = (totalPrice - (totalPrice * bigDiscount / 100));
+            totalPrice = (lenght * kmPrice - (lenght * kmPrice * bigDiscount / 100));
         }
     console.log(totalPrice)
     const allName = document.querySelector(`#all-name`);
     allName.innerHTML = name
     const ticketPrice = document.querySelector(`#ticket-price`);
-    ticketPrice.innerHTML ='Il prezzo del tuo biglietto è: ' + totalPrice;
+    ticketPrice.innerHTML = 'Il prezzo del tuo biglietto è: ' + totalPrice.toFixed(2) + `€`;
     ticketPrice.classList.add('active');
 })
 // attivazione bottone reset
